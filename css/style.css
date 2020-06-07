@@ -1,0 +1,169 @@
+.slider-planes{
+	background: -webkit-linear-gradient(90deg, rgb(233, 237, 242), rgb(232, 238, 241));
+	background: -moz-linear-gradient(90deg, rgb(233, 237, 242), rgb(232, 238, 241));
+	background: linear-gradient(90deg, rgb(233, 237, 242), rgb(232, 238, 241));
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper{
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 47px;
+	padding-right: 47px;
+}
+
+.title{
+	color: #c61020;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 67px;
+}
+
+.planes{
+	background-color: white;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.tablinks{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 24px;
+	color: black;
+	width: 130px;
+	height: 108px;
+}
+
+.tablinks:nth-child(1){
+	background-color: #e2e7ec;
+}
+
+.tablinks:nth-child(2){
+	background-color: #d5e0e3;
+}
+.tablinks:nth-child(3){
+	background-color: #c7d3da;
+}
+.tablinks:nth-child(4){
+	background-color: #bbc7d0;
+}
+.tablinks:nth-child(5){
+	background-color: #afbac1;
+}
+
+.active-tab{
+	background-color: white;
+	color: #c61020;
+}
+
+
+.slick-slider{
+	min-width: 0;
+}
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+.slider{
+	position: relative;
+	padding: 0px 60px;
+}
+
+.slider .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin: -30px 0 0 0;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 60px;
+}
+
+.slider .slick-arrow.slick-prev{
+	left: 0;
+	background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next{
+	right: 0;
+	background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+
+/* Точки */
+.slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider .slick-dots li{
+	list-style: none;
+	margin: 0 10px;
+}
+
+.slider .slick-dots button{
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: tomato;
+	border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button{
+	background-color: black;
+}
+
+
+.slider__item>div{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+
+}

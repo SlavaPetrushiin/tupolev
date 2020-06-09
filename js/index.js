@@ -1,67 +1,33 @@
-const tabs= document.querySelectorAll('.tablinks');
-const planes = document.querySelectorAll('.about');
+window.onload = function() {
+	const tabs= document.querySelectorAll('.tablink');
+	const sliders = document.querySelectorAll('.slider');
 
-tabs.forEach((tab) => {
-	tab.addEventListener('click', tabClickHandler)
-});
+	tabs.forEach((tab) => {
+		tab.addEventListener('click', tabClickHandler);
+	});
 
-function tabClickHandler(event){
-	event.preventDefault();
-	
-	if(event.target.classList.contains('tablinks')){
-		tabs.forEach(tab => {
-			tab.classList.remove('active');
-		});
+	function tabClickHandler(event){
+		event.preventDefault();
 
-		planes.forEach(plane => {
-			plane.classList.remove('active_plane');
-		});
+		if(event.target.classList.contains('tablink')){
+			tabs.forEach(tab => {
+				tab.classList.remove('active-tab');
+			});
 
-		const activeTab = Array.from(document.querySelectorAll('.tablinks')).find(tab => {
-			return tab.name === event.target.dataset.name
-		})
+			sliders.forEach(plane => {
+				plane.classList.remove('slider-active');
+			});
 
-		const activePlane = Array.from(document.querySelectorAll('.about')).find(plane => {
-			return plane.id === event.target.dataset.name
-		})
+			const activeTab = Array.from(tabs).find(tab => {
+				return tab.name === event.target.dataset.name
+			});
 
-		console.log(activePlane)
+			const activePlane = Array.from(sliders).find(plane => {
+				return plane.id === event.target.dataset.name
+			});
 
-		activeTab.classList.add('active');
-		activePlane.classList.add('active_plane');
+			activeTab.classList.add('active-tab');
+			activePlane.classList.add('slider-active');
+		}
 	}
-}
-
-$(document).ready(function(){
-	$('.slider').slick({
-		arrows: true,
-		dots: true,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		speed: 1000,
-		easing: 'ease',
-		infinite: true,
-		initialSlide: 0,
-		autoplay: false,
-		autoplaySpeed: 2000,
-		pauseOnFocus: true,
-		pauseOnHover: true,
-		pauseOnDotsHover: true,
-		draggable: false,  //перетащить мышкой
-		swipe: false, // откл на тел.
-		touchMove: true,
-		centerMode: false,
-		variableWidth: true,
-		rows: 1,
-		slidesPerRow: 1,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-			}
-		}],
-		mobileFirst: true
-
-	});	
-});
+};
